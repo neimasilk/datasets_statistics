@@ -1,55 +1,7 @@
-# belajar panda
-# buka file gabungan.db
 
-
-
-#pylint: disable=invalid-name
-"""
-Generate vocabulary for a tokenized text file.
-"""
-
-import sys
-import argparse
 import collections
-import logging
-
-# parser = argparse.ArgumentParser(
-#     description="Generate vocabulary for a tokenized text file.")
-# parser.add_argument(
-#     "--min_frequency",
-#     dest="min_frequency",
-#     type=int,
-#     default=0,
-#     help="Minimum frequency of a word to be included in the vocabulary.")
-# parser.add_argument(
-#     "--max_vocab_size",
-#     dest="max_vocab_size",
-#     type=int,
-#     help="Maximum number of tokens in the vocabulary")
-# parser.add_argument(
-#     "--downcase",
-#     dest="downcase",
-#     type=bool,
-#     help="If set to true, downcase all text before processing.",
-#     default=False)
-# parser.add_argument(
-#     "infile",
-#     nargs="?",
-#     type=argparse.FileType("r"),
-#     default=sys.stdin,
-#     help="Input tokenized text file to be processed.")
-# parser.add_argument(
-#     "--delimiter",
-#     dest="delimiter",
-#     type=str,
-#     default=" ",
-#     help="Delimiter character for tokenizing. Use \" \" and \"\" for word and char level respectively."
-# )
 
 
-# args = parser.parse_args()
-
-# Counter for all tokens in the vocabulary
 downcase = True
 delimiter = " "
 min_frequency = 30
@@ -94,12 +46,6 @@ def tampilkan_vocab(penghitung):
         for word, count in word_with_counts:
            print("{}\t{}".format(word, count))
 
-
-#TODO :
-# 1. Jumlah Kosakata Sebelum Separasi
-# 2. Jumlah Kosakata Setelah Separasi
-# 3. Selisih pengurangan Kosakata
-# 4. Persen Selisi Pengurangan Kosakata
 
 if __name__ == '__main__':
 
